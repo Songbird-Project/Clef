@@ -1,5 +1,14 @@
-import gleam/io
+import lib/environment
+import shellout
+
+type Options {
+  Options(log_level: Int)
+}
 
 pub fn main() -> Nil {
-  io.println("Hello from clef!")
+  let log_level = environment.validate_log_level()
+
+  let _options = Options(log_level)
+
+  shellout.exit(0)
 }
