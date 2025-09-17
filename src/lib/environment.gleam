@@ -5,6 +5,10 @@ import lib/logging
 
 pub fn validate_log_level() -> Int {
   let log_level = envoy.get("LOG_LEVEL") |> result.unwrap("")
+  let log_level = case log_level {
+    "" -> "0"
+    _ -> log_level
+  }
 
   case int.parse(log_level) {
     Ok(level) -> {
