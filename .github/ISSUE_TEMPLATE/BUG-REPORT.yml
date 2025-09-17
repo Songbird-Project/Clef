@@ -1,0 +1,49 @@
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out this form as accurately as you can.
+  # - type: input
+  #   id: contact
+  #   attributes:
+  #     label: Contact Details
+  #     description: How can we get in touch with you if we need more info?
+  #     placeholder: ex. email@example.com
+  #   validations:
+  #     required: false
+  - type: textarea
+    id: issue
+    attributes:
+      label: What went wrong?
+      description: Give an informative description of what the issue is.
+      placeholder: ex. Clef crashes under X conditions
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of Clef are you running?
+      options:
+        - 0.0.1
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log Output.
+      description: Please copy and paste any relevant log output.
+      render: shell
+  # - type: checkboxes
+  #   id: terms
+  #   attributes:
+  #     label: Code of Conduct
+  #     description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
+  #     options:
+  #       - label: I agree to follow this project's Code of Conduct
+  #         required: true
