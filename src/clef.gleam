@@ -6,7 +6,7 @@ type Options {
 }
 
 pub fn main() -> Nil {
-  let log_level = environment.validate_log_level()
+  let log_level = environment.get_log_level()
 
   let _options = Options(log_level)
 

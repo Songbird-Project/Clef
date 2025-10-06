@@ -3,7 +3,7 @@ import gleam/int
 import gleam/result
 import lib/logging
 
-pub fn validate_log_level() -> Int {
+pub fn get_log_level() -> Int {
   let log_level = envoy.get("LOG_LEVEL") |> result.unwrap("")
   let log_level = case log_level {
     "" -> "0"
