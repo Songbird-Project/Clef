@@ -1,19 +1,9 @@
 import argv
 import glint
 import lib/environment
+import lib/exec
 import lib/flags
-
-type Options {
-  Options(
-    log_level: Int,
-    simulate: Bool,
-    verbose: Bool,
-    hardlink: Bool,
-    force: Bool,
-    origin: String,
-    target: String,
-  )
-}
+import lib/types
 
 fn clef() -> glint.Command(Nil) {
   use <- glint.command_help(
@@ -38,18 +28,12 @@ fn clef() -> glint.Command(Nil) {
   let assert Ok(origin) = origin(flags)
   let assert Ok(target) = target(flags)
 
-  let _options =
-    Options(
-      environment.get_log_level(),
-      simulate,
-      verbose,
-      hardlink,
-      force,
-      origin,
-      target,
-    )
+  let env = types.Env(environment.get_log_level())
 
-  Nil
+  let options =
+    types.Options(simulate, verbose, hardlink, force, origin, target)
+
+  exec.clef_exec(env, options)
 }
 
 pub fn main() -> Nil {
