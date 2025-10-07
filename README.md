@@ -5,7 +5,7 @@
 > If you encounter any issues please file an issue using the
 > provided `Bug Report` template.
 
-Clef is a simple and clean dotfiles manager inspired by GNU Stow.
+Clef is a simple and clean dotfile manager inspired by GNU Stow.
 
 ## Install
 
