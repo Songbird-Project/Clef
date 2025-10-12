@@ -32,3 +32,11 @@ pub fn get_log_level() -> Int {
     }
   }
 }
+
+pub fn get_test(provided: Bool) -> Bool {
+  let clef_test = envoy.get("CLEF_TEST") |> result.unwrap("")
+  case clef_test {
+    "" -> provided
+    _ -> True
+  }
+}

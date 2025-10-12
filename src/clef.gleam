@@ -30,6 +30,8 @@ fn clef() -> glint.Command(Nil) {
 
   let env = types.Env(environment.get_log_level())
 
+  let simulate = environment.get_test(simulate)
+
   let options =
     types.Options(simulate, verbose, hardlink, force, origin, target)
 
