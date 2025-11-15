@@ -1,5 +1,11 @@
 # Clef
 
+> [!IMPORTANT]
+> Clef is no longer being developed, it will be replaced by
+> Nest's to-be-implemented `manage` subcommand. If you would like
+> to keep Clef alive and are willing to maintain it, please [email me](mailto:vaelixd@proton.me).
+> For now, the repo will be archived.
+
 > [!NOTE]
 > Clef is experimental and does not yet have a stable release.
 > If you encounter any issues please file an issue using the
